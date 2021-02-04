@@ -12,9 +12,3 @@ def test_items(browser, language):
         time.sleep(4)
         es_button_text = browser.find_element(By.CLASS_NAME, 'btn.btn-lg.btn-primary.btn-add-to-basket').text
         assert es_button_text == 'Añadir al carrito'
-    elif language == 'fr':
-        browser.find_element(By.CSS_SELECTOR, '[value="fr"]').click()
-        browser.find_element(By.CSS_SELECTOR, '[class="btn btn-default"]').click()
-        time.sleep(4)
-        fr_button_text = browser.find_element(By.CLASS_NAME, 'btn.btn-lg.btn-primary.btn-add-to-basket').text
-        assert fr_button_text == 'Ajouter au panier'
